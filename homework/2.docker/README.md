@@ -10,3 +10,12 @@
 на localhost:port должно быть доступно приложение в контейнере (оно отвечает Hello, World!).
 
 Сохраните получившийся Dockerfile в любом публичном Git репозитории, например GitHub, и пришлите ссылку на репозиторий.
+
+
+build & run python:
+docker build -f dockerfile.python -t app:v0.1-python .
+docker run -itd --name app -p 8080:8080 app:v0.1-python
+
+build & run golang:
+docker build -f dockerfile.golang -t app:v0.1-golang .
+docker run -itd --name app -p 8080:8080 app:v0.1-golang
